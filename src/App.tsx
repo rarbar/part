@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 import './App.css';
 
-export const App=()=> {
+export const App: FC = () => {
+  const [counter, setCounter] = useState(0);
   return (
-    <h1>
-      Start
-    </h1>
+    <div>
+      <h1>Start{counter}</h1>
+      <button
+        onClick={() => {
+          setCounter((prev) => prev + 1);
+        }}
+      >
+        X
+      </button>
+    </div>
   );
-}
-
+};
