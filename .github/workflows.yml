@@ -2,7 +2,7 @@ name: Test React App
 on: push
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-12
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
