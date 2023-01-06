@@ -5,10 +5,8 @@
   },
   "extends": [
     "plugin:react-hooks/recommended",
-    "plugin:react/recommended",
-    "plugin:import/typescript",
-    "plugin:import/recommended",
-    "standard-with-typescript",
+    "airbnb",
+    "airbnb-typescript",
     "plugin:prettier/recommended"
   ],
   "overrides": [

@@ -1,18 +1,22 @@
-import React, { FC, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
-export const App: FC = () => {
+export const App = () => {
   const [counter, setCounter] = useState(0);
+
+  const timer = () => {
+    setCounter((prev) => prev + 1);
+  };
+  useEffect(() => {
+    setTimeout(timer, 1000);
+    return () => {
+      clearTimeout(timer as any);
+    };
+  }, [counter]);
+
   return (
     <div>
       <h1>Start{counter}</h1>
-      <button
-        onClick={() => {
-          setCounter((prev) => prev + 1);
-        }}
-      >
-        X
-      </button>
     </div>
   );
 };
