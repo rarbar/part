@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './App.css';
 
-export const App = () => {
-  const [counter, setCounter] = useState(0);
-
-  const timer = () => {
-    setCounter((prev) => prev + 1);
-  };
-  useEffect(() => {
-    setTimeout(timer, 1000);
-    return () => {
-      clearTimeout(timer as any);
-    };
-  }, [counter]);
-
+function App() {
   return (
-    <div>
-      <h1>Start{counter}</h1>
+    <div className="App">
+      <header className="App-header">
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
+
+export default App;
